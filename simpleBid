@@ -1,0 +1,15 @@
+pragma solidity ^0.4.19;
+contract bid{
+   address public bidder;
+   uint public bidValue;
+   
+   event NewBid(address bidder, uint bidValue);
+   
+   function assign(address _bidder, uint _bidValue) public {
+       if(bidValue < _bidValue){
+            bidValue = _bidValue;
+            bidder = _bidder;
+            NewBid(bidder, bidValue );
+       }
+   }
+}

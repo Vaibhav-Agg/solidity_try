@@ -1,0 +1,16 @@
+pragma solidity ^0.4.19;
+contract HelloWorld {
+    address message;
+
+    function HelloWorld() public{
+        message = msg.sender;
+    }
+
+    function display() constant public returns (address){
+        return message;
+    }
+
+    function edit(address _message) public {
+        message = _message;
+    } 
+}

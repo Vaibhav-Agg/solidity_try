@@ -1,0 +1,23 @@
+pragma solidity ^0.4.19;
+contract calculate{
+    uint n1;
+    uint n2;
+    uint ans = 0;
+    
+    function operation(uint _n1, uint _n2) public returns (uint){
+        if(n1<n2){
+            for(uint i = _n1; i <= _n2; i++){
+                ans = ans + i;
+            }
+            return ans;
+        }
+        if(n2<n1){
+            for(i = _n2; i <= _n1; i++){
+                ans = ans + i;
+            }
+            return ans;
+        }
+        else
+            return n1;
+    }
+}
